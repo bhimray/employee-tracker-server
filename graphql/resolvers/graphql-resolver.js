@@ -184,8 +184,8 @@ module.exports = {
                     {Name:args.dailyDetailsInput.Name, Email:args.dailyDetailsInput.Email},
                     {     
                         $set:{
-                            [`attendence.${pushVariable}.dailyWorkedHour`]:dailyWorkedHour,
-                            [`attendence.${pushVariable}.dailyEarned`]:dailyEarned
+                            [`attendence.${pushVariable}.dailyWorkedHour`]:dailyWorkedHour.toFixed(2),
+                            [`attendence.${pushVariable}.dailyEarned`]:dailyEarned.toFixed(2)
                         },         
                         $push:{
                             [`attendence.${pushVariable}.dailyDetails`]:{
