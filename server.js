@@ -41,4 +41,4 @@ graphqlHTTP({
     rootValue:graphqlResolver,
     graphiql:true
 }))
-app.listen(port, ()=>{console.log("server is listening")})
+app.listen(port, (err)=>{console.log("server is listening"); if (err) console.log(err, "==== error occurred")})
