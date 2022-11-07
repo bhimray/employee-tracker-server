@@ -35,10 +35,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/graphql',
+app.use('/',
 graphqlHTTP({
     schema:graphqlSchema,
     rootValue:graphqlResolver,
     graphiql:true
 }))
-app.listen(port)
+app.listen(port, ()=>{console.log("server is listening")})
